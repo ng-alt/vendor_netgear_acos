@@ -27,9 +27,9 @@
 
 #define DHCP_SERVER_PORT  67
 #define DHCP_CLIENT_PORT  68
-#define HTTP_PORT         80 /*  added, zacker, 08/11/2009, @mbssid_filter */
+#define HTTP_PORT         80 /* foxconn added, zacker, 08/11/2009, @mbssid_filter */
 
-/*  add start, Tony W.Y. Wang, 12/22/2009 @block FTP and Samba access */
+/* Foxconn add start, Tony W.Y. Wang, 12/22/2009 @block FTP and Samba access */
 #define FTP_PORT1        20
 #define FTP_PORT2        21
 #define SAMBA_PORT1      137
