@@ -53,6 +53,11 @@
 #define WL1_GUEST1_IFNAME   "wl1.1"
 #define WL1_GUEST2_IFNAME   "wl1.2"
 #define WL1_GUEST3_IFNAME   "wl1.3"
+#if defined(R8000)
+#define WL2_GUEST1_IFNAME   "wl2.1"
+#define WL2_GUEST2_IFNAME   "wl2.2"
+#define WL2_GUEST3_IFNAME   "wl2.3"
+#endif
 #endif
 #endif /* AP_MODE */
 /* Foxconn added end, Wins, 03/18/2011, @AP_MODE */

@@ -46,14 +46,15 @@
 #define FW_REGION            WW_VERSION   /* true f/w region */
 
 /*formal version control*/
-#define AMBIT_HARDWARE_VERSION     "U12H270T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.3.60"
-#define AMBIT_UI_VERSION           "1.1.27"
-#define STRING_TBL_VERSION         "1.0.3.60_2.1.38.1"
+#define AMBIT_HARDWARE_VERSION     "U12H315T00"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.0.28"
+#define AMBIT_UI_VERSION           "1.0.12"
+#define STRING_TBL_VERSION         "1.0.0.28_2.1.38.1"
 
-#define AMBIT_PRODUCT_NAME          "R7000"
-#define AMBIT_PRODUCT_DESCRIPTION   "802.11ac Dual Band Gigabit Wireless Router R7000"
-#define UPnP_MODEL_URL              "R7000.aspx"
+#define AMBIT_PRODUCT_NAME          "R8000"
+#define AMBIT_PRODUCT_ALIAS         "Nighthawk X6"
+#define AMBIT_PRODUCT_DESCRIPTION   "802.11ac Dual Band Gigabit Wireless Router R8000"
+#define UPnP_MODEL_URL              "R8000.aspx"
 #define UPnP_MODEL_DESCRIPTION      "802.11ac"
 
 #define AMBIT_NVRAM_VERSION  "1" /* digital only */
@@ -71,6 +72,9 @@
 #define LAN_IF_NAME_NUM             "vlan1"
 #define WLAN_IF_NAME_NUM            "eth1"
 #define WLAN_N_IF_NAME_NUM          "eth2"
+#if defined(R8000)
+#define WLAN_5G_2_IF_NAME_NUM          "eth3"
+#endif
 #define WDS_IF_NAME_NUM             "wds0.1"    /* WDS interface */
 
 /* Foxconn add start by aspen Bai, 11/13/2008 */
@@ -83,7 +87,11 @@
 #define WLAN_5G_BSS1_NAME_NUM       "wl1.1"     /* Multiple BSSID #2 */
 #define WLAN_5G_BSS2_NAME_NUM       "wl1.2"     /* Multiple BSSID #3 */
 #define WLAN_5G_BSS3_NAME_NUM       "wl1.3"     /* Multiple BSSID #4 */
+
 /* Foxconn add end, Tony W.Y. Wang, 03/22/2010 @For 5G*/
+#define WLAN_5G_2_BSS1_NAME_NUM       "wl2.1"     /* Multiple BSSID #2 */
+#define WLAN_5G_2_BSS2_NAME_NUM       "wl2.2"     /* Multiple BSSID #3 */
+#define WLAN_5G_2_BSS3_NAME_NUM       "wl2.3"     /* Multiple BSSID #4 */
 #endif /* MULTIPLE_SSID */
 /* Foxconn add end by aspen Bai, 11/13/2008 */
 
@@ -106,8 +114,10 @@
 
 #define GPIO_WIFI_2G_LED            13
 #define GPIO_WIFI_5G_LED            12
-#define GPIO_WIFI_SUMMARY_LED       15
-
+#define GPIO_WIFI_5G_2_LED          16
+#define GPIO_WIFI_SUMMARY_LED       14   // from 15 to 14 by ken
+ 
+#define GPIO_LED_SWITCH             19
 
 #define LANG_TBL_MTD_RD             "/dev/mtdblock"
 #define LANG_TBL_MTD_WR             "/dev/mtd"
