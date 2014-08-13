@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H315T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.0.100"
-#define AMBIT_UI_VERSION           "1.0.44"
-#define STRING_TBL_VERSION         "1.0.0.100_2.1.40.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.0.102"
+#define AMBIT_UI_VERSION           "1.0.45"
+#define STRING_TBL_VERSION         "1.0.0.102_2.1.40.1"
 
 #define AMBIT_PRODUCT_NAME          "R8000"
 #define AMBIT_PRODUCT_ALIAS         "Nighthawk X6"
