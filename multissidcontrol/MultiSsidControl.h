@@ -41,7 +41,7 @@
 
 /* Foxconn added start, Wins, 03/18/2011, @AP_MODE */
 #if defined(AP_MODE)             
-#if defined(WNDR3400v3)
+#if defined(WNDR3400v3) || (defined R7000) || (defined R8000) 
 #define WAN_IFNAME          "vlan2"
 #else
 #define WAN_IFNAME          "eth0"
@@ -71,6 +71,11 @@ typedef struct MulitSsidControlProfile {
 #if defined(AP_MODE)
        int apMode;
 #endif /* AP_MODE */
+#if defined(VLAN_SUPPORT)
+       int vlanIptvMode;
+       int bridgeIntf[8];
+       int wanIntf[8];
+#endif
        /* Foxconn added end, Wins, 03/18/2011, @AP_MODE */
 }T_MSsidCtlProfile;
 
