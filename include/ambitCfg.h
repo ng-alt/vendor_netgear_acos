@@ -46,15 +46,15 @@
 #define FW_REGION            WW_VERSION   /* true f/w region */
 
 /*formal version control*/
-#define AMBIT_HARDWARE_VERSION     "U12H240T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.3.22"
-#define AMBIT_UI_VERSION           "10.0.67"
-#define STRING_TBL_VERSION         "1.0.3.8_2.1.33.8"
+#define AMBIT_HARDWARE_VERSION     "U12H332T00"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.0.20"
+#define AMBIT_UI_VERSION           "1.0.11"
+#define STRING_TBL_VERSION         "1.0.0.20_2.1.38.1"
 
-#define AMBIT_PRODUCT_NAME          "R6300v2"
-#define AMBIT_PRODUCT_DESCRIPTION   "N1800 Wireless Dual Band Gigabit Router R6300v2"
-#define UPnP_MODEL_URL              "R6300v2.aspx"
-#define UPnP_MODEL_DESCRIPTION      "N1800"
+#define AMBIT_PRODUCT_NAME          "R6400"
+#define AMBIT_PRODUCT_DESCRIPTION   "802.11ac Dual Band Gigabit Wireless Router R6400"
+#define UPnP_MODEL_URL              "R6400.aspx"
+#define UPnP_MODEL_DESCRIPTION      "802.11ac"
 
 #define AMBIT_NVRAM_VERSION  "1" /* digital only */
 
@@ -90,24 +90,24 @@
 /* GPIO definitions */
 /* Foxconn modified start, Wins, 04/11/2011 */
 
-#define GPIO_POWER_LED_GREEN        2
-#define GPIO_POWER_LED_GREEN_STR    "2"
-#define GPIO_POWER_LED_AMBER        3
-#define GPIO_POWER_LED_AMBER_STR    "3"
+#define GPIO_POWER_LED_GREEN        1
+#define GPIO_POWER_LED_GREEN_STR    "1"
+#define GPIO_POWER_LED_AMBER        2
+#define GPIO_POWER_LED_AMBER_STR    "2"
 
 #define GPIO_LOGO_LED_1             1
 #define GPIO_LOGO_LED_1_STR         "1"
-#define GPIO_LOGO_LED_2             9
-#define GPIO_LOGO_LED_2_STR         "9"
+#define GPIO_LOGO_LED_2             7
+#define GPIO_LOGO_LED_2_STR         "7"
 
-#define GPIO_WAN_LED                10
+#define GPIO_WAN_LED                6
+#define GPIO_WAN_LED_2              7
 
-#if (defined R6300v2)
-#define GPIO_WIFI_5G_LED            11
-#else
+
 #define GPIO_WIFI_2G_LED            9
-#define GPIO_WIFI_5G_LED            11
-#endif
+#define GPIO_WIFI_5G_LED            8
+#define GPIO_WIFI_SUMMARY_LED       11
+
 
 #define LANG_TBL_MTD_RD             "/dev/mtdblock"
 #define LANG_TBL_MTD_WR             "/dev/mtd"
@@ -115,57 +115,64 @@
 #define ML_MTD_RD                   "/dev/mtdblock"
 #define ML_MTD_WR                   "/dev/mtd"
 /* MTD definitions */
-#define ML1_MTD_RD                  "/dev/mtdblock7"
-#define ML1_MTD_WR                  "/dev/mtd7"
-#define ML2_MTD_RD                  "/dev/mtdblock8"
-#define ML2_MTD_WR                  "/dev/mtd8"
+#define ML1_MTD_RD                  "/dev/mtdblock9"
+#define ML1_MTD_WR                  "/dev/mtd9"
+#define ML2_MTD_RD                  "/dev/mtdblock10"
+#define ML2_MTD_WR                  "/dev/mtd10"
 
 #if defined(X_ST_ML)
-#define ST_SUPPORT_NUM              (7)        /* The maxium value can be 2-10. */
-#define LANG_TBL_MTD_START          (7)
+#define ST_SUPPORT_NUM              (9)        /* The maxium value can be 2-10. */
+#define LANG_TBL_MTD_START          (9)
 #define LANG_TBL_MTD_END            (LANG_TBL_MTD_START + ST_SUPPORT_NUM - 1)
-#define FLASH_MTD_ML_SIZE           0x10000
+#define FLASH_MTD_ML_SIZE           0x20000   /* 128k */
 #define BUILTIN_LANGUAGE            "English"
 
-#define ML3_MTD_RD                  "/dev/mtdblock9"
-#define ML3_MTD_WR                  "/dev/mtd9"
-#define ML4_MTD_RD                  "/dev/mtdblock10"
-#define ML4_MTD_WR                  "/dev/mtd10"
-#define ML5_MTD_RD                  "/dev/mtdblock11"
-#define ML5_MTD_WR                  "/dev/mtd11"
-#define ML6_MTD_RD                  "/dev/mtdblock12"
-#define ML6_MTD_WR                  "/dev/mtd12"
-#define ML7_MTD_RD                  "/dev/mtdblock13"
-#define ML7_MTD_WR                  "/dev/mtd13"
+#define BOOT_MTD_RD                  "/dev/mtdblock0"
+#define BOOT_MTD_WR                  "/dev/mtd0"
 
-#define TF1_MTD_RD                  "/dev/mtdblock5"
-#define TF1_MTD_WR                  "/dev/mtd5"
-#define TF2_MTD_RD                  "/dev/mtdblock6"
-#define TF2_MTD_WR                  "/dev/mtd6"
 
-#define POT_MTD_RD                  "/dev/mtdblock3"
-#define POT_MTD_WR                  "/dev/mtd3"
+#define ML3_MTD_RD                  "/dev/mtdblock11"
+#define ML3_MTD_WR                  "/dev/mtd11"
+#define ML4_MTD_RD                  "/dev/mtdblock12"
+#define ML4_MTD_WR                  "/dev/mtd12"
+#define ML5_MTD_RD                  "/dev/mtdblock13"
+#define ML5_MTD_WR                  "/dev/mtd13"
+#define ML6_MTD_RD                  "/dev/mtdblock14"
+#define ML6_MTD_WR                  "/dev/mtd14"
+#define ML7_MTD_RD                  "/dev/mtdblock15"
+#define ML7_MTD_WR                  "/dev/mtd15"
 
-#define BD_MTD_RD                   "/dev/mtdblock2"
-#define BD_MTD_WR                   "/dev/mtd2"
+#define TF1_MTD_RD                  "/dev/mtdblock7"
+#define TF1_MTD_WR                  "/dev/mtd7"
+#define TF2_MTD_RD                  "/dev/mtdblock8"
+#define TF2_MTD_WR                  "/dev/mtd8"
+
+#define POT_MTD_RD                  "/dev/mtdblock5"
+#define POT_MTD_WR                  "/dev/mtd5"
+
+#define BD_MTD_RD                   "/dev/mtdblock4"
+#define BD_MTD_WR                   "/dev/mtd4"
 
 #define NVRAM_MTD_RD                "/dev/mtdblock1"
 #define NVRAM_MTD_WR                "/dev/mtd1"
 #endif
 
-#define KERNEL_MTD_RD               "/dev/mtdblock14"
-#define KERNEL_MTD_WR               "/dev/mtd14"
+#define KERNEL_MTD_RD               "/dev/mtdblock2"
+#define KERNEL_MTD_WR               "/dev/mtd2"
 
-#define ROOTFS_MTD_RD               "/dev/mtdblock15"
-#define ROOTFS_MTD_WR               "/dev/mtd15"
+#define ROOTFS_MTD_RD               "/dev/mtdblock3"
+#define ROOTFS_MTD_WR               "/dev/mtd3"
 
-#define LANG_TBL1_MTD_RD            "/dev/mtdblock7"
-#define LANG_TBL1_MTD_WR            "/dev/mtd7"
-#define LANG_TBL2_MTD_RD            "/dev/mtdblock8"
-#define LANG_TBL2_MTD_WR            "/dev/mtd8"
+#define LANG_TBL1_MTD_RD            "/dev/mtdblock9"
+#define LANG_TBL1_MTD_WR            "/dev/mtd9"
+#define LANG_TBL2_MTD_RD            "/dev/mtdblock10"
+#define LANG_TBL2_MTD_WR            "/dev/mtd10"
 
-#define POT2_MTD_RD                 "/dev/mtdblock4"
-#define POT2_MTD_WR                 "/dev/mtd4"
+#define POT2_MTD_RD                 "/dev/mtdblock6"
+#define POT2_MTD_WR                 "/dev/mtd6"
+
+#define QOS_MTD_RD                 	"/dev/mtdblock16"
+#define QOS_MTD_WR                 	"/dev/mtd16"
 
 
 /* wklin added start, 11/22/2006 */
@@ -186,7 +193,7 @@
 /* Foxconn Perry added end, 2011/04/13, for document URL */
 
 /* Foxconn Perry added start, 2011/08/17, for USB Support level */
-#define USB_support_level        "5"       /* Bob modified 5->13, add bit 4 for Readyshare Vault */
+#define USB_support_level        "29"       /* pling modified 5->13, add bit 4 for Readyshare Vault *//*kathy modified 13->29, add bit 16 for ReadyCLOUD */
 /* Foxconn Perry added end, 2011/08/17, for USB Support level */
 
 #endif /*_AMBITCFG_H*/

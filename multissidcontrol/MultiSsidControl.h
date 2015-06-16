@@ -27,9 +27,9 @@
 
 #define DHCP_SERVER_PORT  67
 #define DHCP_CLIENT_PORT  68
-#define HTTP_PORT         80 /*  added, zacker, 08/11/2009, @mbssid_filter */
+#define HTTP_PORT         80 /* foxconn added, zacker, 08/11/2009, @mbssid_filter */
 
-/*  add start, Tony W.Y. Wang, 12/22/2009 @block FTP and Samba access */
+/* Foxconn add start, Tony W.Y. Wang, 12/22/2009 @block FTP and Samba access */
 #define FTP_PORT1        20
 #define FTP_PORT2        21
 #define SAMBA_PORT1      137
@@ -37,10 +37,15 @@
 #define SAMBA_PORT3      139
 #define SAMBA_PORT4      445    /*stanley add 01/13/2010 add samba port*/
 #define SOAP_API_PORT    5000   /* pling added 10/22/2013, SOAP API port */
+#define TELNET_PORT      23     /* Bob added 02/27/2014, telnet port */
 
-/*  added start, Wins, 03/18/2011, @AP_MODE */
+/* Foxconn added start, Wins, 03/18/2011, @AP_MODE */
 #if defined(AP_MODE)             
+#if defined(WNDR3400v3) || (defined R7000)  /* pling modified 06/30/2014, R7000 WAN is "vlan2" when in AP mode */
+#define WAN_IFNAME          "vlan2"
+#else
 #define WAN_IFNAME          "eth0"
+#endif
 #define WL0_GUEST1_IFNAME   "wl0.1"
 #define WL0_GUEST2_IFNAME   "wl0.2"
 #define WL0_GUEST3_IFNAME   "wl0.3"
@@ -50,18 +55,23 @@
 #define WL1_GUEST3_IFNAME   "wl1.3"
 #endif
 #endif /* AP_MODE */
-/*  added end, Wins, 03/18/2011, @AP_MODE */
+/* Foxconn added end, Wins, 03/18/2011, @AP_MODE */
 
-/*  add end, Tony W.Y. Wang, 12/22/2009 */
+/* Foxconn add end, Tony W.Y. Wang, 12/22/2009 */
 typedef struct MulitSsidControlProfile {
        char IfName[8];
        int enable;
-       unsigned int FilterIP; /*  added, zacker, 08/11/2009, @mbssid_filter */
-       /*  added start, Wins, 03/18/2011, @AP_MODE */
+       unsigned int FilterIP; /* foxconn added, zacker, 08/11/2009, @mbssid_filter */
+       /* Foxconn added start, Wins, 03/18/2011, @AP_MODE */
 #if defined(AP_MODE)
        int apMode;
 #endif /* AP_MODE */
-       /*  added end, Wins, 03/18/2011, @AP_MODE */
+#if defined(VLAN_SUPPORT)
+       int vlanIptvMode;
+       int bridgeIntf[8];
+       int wanIntf[8];
+#endif
+       /* Foxconn added end, Wins, 03/18/2011, @AP_MODE */
 }T_MSsidCtlProfile;
 
 

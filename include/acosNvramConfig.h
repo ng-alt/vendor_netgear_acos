@@ -39,6 +39,7 @@ extern "C"
 #define DECRYPT_END_TAG             "</de>"
 /* ambit added end, bright wang, 03/08/2004 */
 
+/* foxconn modified start, tm wol workaround, jonathan 2012/07/31 */
 #define ACOSNVRAM_TAG_TM_WOL            "TM_WOL_ENABLE"    
 /* NVRAM Parameters */
 #define ACOSNVRAM_TAG_VERSION           "system_nvram_version"
@@ -314,11 +315,11 @@ extern "C"
                                            IN BOOL blSaveImmediately);
     extern int acosNvramConfig_save (void);
 
-    /*  added start Peter Ling 12/05/2005 */
+    /* Foxconn added start Peter Ling 12/05/2005 */
     /* used for config backup and restore */
     extern int acosNvramConfig_readflash (char *buf);
     extern int acosNvramConfig_writeflash (char *buf, int size);
-    /*  added end Peter Ling 12/05/2005 */
+    /* Foxconn added end Peter Ling 12/05/2005 */
 #if (defined U12H187)
     extern void acosNvramConfig_setPAParam_RU(void);
 #endif
@@ -383,8 +384,8 @@ extern "C"
 
 extern int acosNvramConfig_setPAParam_RU2(int enable);
 
-/*  add start, FredPeng, 03/18/2009 */
+/* Foxconn add start, FredPeng, 03/18/2009 */
 extern int WAN_ith_CONFIG_SET_AS_STR(int wanIdx, char *name, char *value);
-/*  add end, FredPeng, 03/18/2009 */
+/* Foxconn add end, FredPeng, 03/18/2009 */
 
 #endif                          /* _ACOSNVRAMCONFIG_H */

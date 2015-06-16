@@ -27,9 +27,10 @@
 
 #define DHCP_SERVER_PORT  67
 #define DHCP_CLIENT_PORT  68
-#define HTTP_PORT         80 /*  added, zacker, 08/11/2009, @mbssid_filter */
+#define HTTP_PORT         80 /* foxconn added, zacker, 08/11/2009, @mbssid_filter */
+#define DNS_PORT          53
 
-/*  add start, Tony W.Y. Wang, 12/22/2009 @block FTP and Samba access */
+/* Foxconn add start, Tony W.Y. Wang, 12/22/2009 @block FTP and Samba access */
 #define FTP_PORT1        20
 #define FTP_PORT2        21
 #define SAMBA_PORT1      137
@@ -55,6 +56,7 @@ typedef struct access_control_mac_list
     int status;
     char dev_name[MAX_DEVICE_NAME];
     int conn_type;
+    int order;      /* pling added 07/22/2014 */
 }T_AccessControlTable;
 
 /*Fxcn added end, dennis,02/16/2012 @access control*/
