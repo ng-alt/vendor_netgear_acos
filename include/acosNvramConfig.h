@@ -19,7 +19,11 @@ extern "C"
 #endif                          /* __cplusplus */
 
 #include "acosTypes.h"
-
+#if defined(_XDSL_PRODUCT)
+#if defined(DUAL_WAN) || defined (CONFIG_RUSSIA_IPTV)
+#include "adslNvramTag.h"
+#endif
+#endif
 /* definitions */
 #define ACOSNVRAM_MAX_TAG_LEN     32
 #define ACOSNVRAM_MAX_VAL_LEN     512
@@ -320,7 +324,7 @@ extern "C"
     extern int acosNvramConfig_readflash (char *buf);
     extern int acosNvramConfig_writeflash (char *buf, int size);
     /* Foxconn added end Peter Ling 12/05/2005 */
-#if (defined U12H187)
+#if (defined WNDR3400v3)
     extern void acosNvramConfig_setPAParam_RU(void);
 #endif
 /******************The naming rule of config tag name *************************
@@ -382,10 +386,12 @@ extern "C"
 }
 #endif
 
+#if !defined(_XDSL_PRODUCT)
 extern int acosNvramConfig_setPAParam_RU2(int enable);
 
 /* Foxconn add start, FredPeng, 03/18/2009 */
 extern int WAN_ith_CONFIG_SET_AS_STR(int wanIdx, char *name, char *value);
 /* Foxconn add end, FredPeng, 03/18/2009 */
 
+#endif
 #endif                          /* _ACOSNVRAMCONFIG_H */

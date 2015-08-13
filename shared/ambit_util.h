@@ -84,6 +84,9 @@ extern int isValidIpAddr(char *ipAddr);
 extern int isValidNetworkAddr(char *ipAddr);
 extern int isValidNetmask(char *mask);
 extern int isLanSubnet(char *ipAddr);
+#ifdef OPENVPN_SUPPORT
+extern int isOpenvpnLanSubnet(char *ipAddr); /* Foxconn added by Max Ding, 04/10/2014 OpenVPN: support tun and tap at the same time */
+#endif
 /* Foxconn add start, Max Ding, 10/31/2008 for @RU_two_wan */
 #ifdef STATIC_PPPOE
 extern int isSecWanSubnet(char *ipAddr);
@@ -108,12 +111,6 @@ extern char *ether_etoa(const unsigned char *e, char *a);
 extern unsigned long calculate_checksum (int action, char *s, int size);
 extern unsigned short hd_cksum(unsigned short *addr, int len);
 
-/* foxconn modified start, zacker, 05/20/2010, @log_cat */
-#if 0
-/* Foxconn added start Bob Guo 11/14/2006 */
-extern int ambitWriteLog(char *pcLog, int iLen);
-/* Foxconn added end Bob Guo 11/14/2006 */
-#endif
 
 #ifndef LOG_CATEGORY_ENUM
 #define LOG_CATEGORY_ENUM
@@ -215,5 +212,31 @@ extern int checkSemicolon(char *str);
 extern int getNthValueSafe(int index, char *value, char delimit, char *result, int len);
 extern int deleteNthValueMulti(int index[], int count, char *value, char delimit);
 extern char *racat(char *s, int i);
+int SYSTEM(const char *format, ...);
+
+#if defined(WIZ_LOG) 
+extern int add_log_title(char *str_in_out, unsigned int str_out_len, char *step);
+//extern int add_log_title(char *str_in_out, unsigned int str_out_len);
+extern int wizardWriteLog(char *pcLog, int iLen);
+extern int upload_wizard_log(void);
 #endif
 
+/* Foxconn added start pling 12/10/2014 */
+/* NTGR IPv6 Auto Detection spec change.
+ *  The following define is moved from ap/acos/rc/ipv6.c
+ */
+#if (defined ACOS_IPV6RD)
+typedef struct {
+  char interface[32];
+  char enable;
+  unsigned int ipv4_masklen;
+  char ipv6_prefix[32];
+  char br_addr[64];    // In TR-181 spec, it supports max 4 br addrs, we reserves the space for it.
+} ipv6rd_t;
+#endif
+/* Foxconn added end pling 12/10/2014 */
+
+#if (defined MULTI_LAN)
+extern int isMultiLanSubnet(char *ipAddr);
+#endif
+#endif
