@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H334T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.2.26"
-#define AMBIT_UI_VERSION           "1.0.41"
-#define STRING_TBL_VERSION         "1.0.2.26_2.1.46.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.2.54"
+#define AMBIT_UI_VERSION           "1.0.56"
+#define STRING_TBL_VERSION         "1.0.2.54_2.1.46.1"
 
 #define AMBIT_PRODUCT_NAME          "R7800"
 #define AMBIT_PRODUCT_ALIAS         "Nighthawk X8"
@@ -59,6 +59,7 @@
 #define AMBIT_PRODUCT_NAME_TRI_BAND         "R8500"
 #define AMBIT_PRODUCT_DESCRIPTION_TRI_BAND  "802.11ac Dual Band Gigabit Wireless Router R8500"
 #define UPnP_MODEL_URL_TRI_BAND             "http://www.netgear.com/Products/RoutersandGateways/RangeMaxNEXTWirelessRoutersandGateways/R8500.aspx"
+#define R8500_4366C0_HWREV          "MP2"
 #endif
 
 #define UPnP_MODEL_DESCRIPTION      "802.11ac"
