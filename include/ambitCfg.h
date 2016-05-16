@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H334T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.2.54"
-#define AMBIT_UI_VERSION           "1.0.56"
-#define STRING_TBL_VERSION         "1.0.2.54_2.1.46.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.2.64"
+#define AMBIT_UI_VERSION           "1.0.62"
+#define STRING_TBL_VERSION         "1.0.2.64_2.1.46.1"
 
 #define AMBIT_PRODUCT_NAME          "R7800"
 #define AMBIT_PRODUCT_ALIAS         "Nighthawk X8"
@@ -61,6 +61,18 @@
 #define UPnP_MODEL_URL_TRI_BAND             "http://www.netgear.com/Products/RoutersandGateways/RangeMaxNEXTWirelessRoutersandGateways/R8500.aspx"
 #define R8500_4366C0_HWREV          "MP2"
 #endif
+
+/*foxconn Han edited start, 12/29/2015 for R8300 (U12H335T21)*/
+#if defined(U12H335T21)
+    /*foxconn Han edited, 01/14/2016 R8300 is U12H335T99 not T21 anymore, but keep original compile flag*/
+#define AMBIT_R8300_REV             99
+#define AMBIT_PRODUCT_NAME_R8300    "R8300"
+#define AMBIT_PRODUCT_DESCRIPTION_R8300  "802.11ac Dual Band Gigabit Wireless Router R8300"
+#define UPnP_MODEL_URL_R8300             "http://www.netgear.com/Products/RoutersandGateways/RangeMaxNEXTWirelessRoutersandGateways/R8300.aspx"
+#define NTGR_SPECIFIC_HW_ID_R8300       "VEN_01f2&amp;DEV_0026&amp;REV_01"
+#define NTGR_GENERIC_HW_ID_R8300        "VEN_01f2&amp;DEV_8000&amp;SUBSYS_01&amp;REV_01 VEN_01f2&amp;DEV_8000&amp;REV_01"
+#endif  /*U12H335T21*/
+/*foxconn Han edited, 12/29/2015 for R8300 (U12H335T21)*/
 
 #define UPnP_MODEL_DESCRIPTION      "802.11ac"
 
