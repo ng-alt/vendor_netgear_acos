@@ -281,6 +281,9 @@ extern "C"
 #define ACOSNVRAM_TAG_UPNP_ALGPORT_PREFIX	"upnp_algport"  /* ALG port related to UPnP */
 #define ACOSNVRAM_TAG_UPNP_ALGPROT_PREFIX	"upnp_algport_pro"      /* ALG port protocol related to UPnP */
 /* Ambit added end, Eddic, 05/17/2004 */
+#if (defined HIDDEN_PAGE_DEBUG)
+#define ACOSNVRAM_TAG_HIDDEN_PAGE_DBG_IPV6  "hidden_page_debug_ipv6"  
+#endif
 
     extern int acosNvramConfig_init (IN char *pcFsMount);
     extern char *acosNvramConfig_get(const char *name);

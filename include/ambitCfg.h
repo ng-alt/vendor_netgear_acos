@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H332T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.0.26"
-#define AMBIT_UI_VERSION           "1.0.14"
-#define STRING_TBL_VERSION         "1.0.0.26_2.1.38.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.1.12"
+#define AMBIT_UI_VERSION           "1.0.11"
+#define STRING_TBL_VERSION         "1.0.1.12_2.1.38.1"
 
 #define AMBIT_PRODUCT_NAME          "R6400"
 #define AMBIT_PRODUCT_DESCRIPTION   "802.11ac Dual Band Gigabit Wireless Router R6400"
