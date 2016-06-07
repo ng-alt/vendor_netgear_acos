@@ -45,14 +45,14 @@
 #define WLAN_REGION          WW_VERSION
 #define FW_REGION            WW_VERSION   /* true f/w region */
 
-#define HSDPA_DRIVER_VERSION "v1.7"
-#define HSDPA_SOFTWARE_VERSION "v1.7"
+#define HSDPA_DRIVER_VERSION ""
+#define HSDPA_SOFTWARE_VERSION ""
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H270T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.5.64"
-#define AMBIT_UI_VERSION           "1.1.88"
-#define STRING_TBL_VERSION         "1.0.5.64_2.1.38.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.5.70"
+#define AMBIT_UI_VERSION           "1.1.91"
+#define STRING_TBL_VERSION         "1.0.5.70_2.1.38.1"
 
 #define AMBIT_PRODUCT_NAME          "R7000"
 #define AMBIT_PRODUCT_DESCRIPTION   "802.11ac Dual Band Gigabit Wireless Router R7000"
