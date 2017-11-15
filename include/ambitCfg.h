@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H315T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.4.2"
-#define AMBIT_UI_VERSION           "1.1.41"
-#define STRING_TBL_VERSION         "1.0.4.2_2.1.49.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.4.4"
+#define AMBIT_UI_VERSION           "1.1.42"
+#define STRING_TBL_VERSION         "1.0.4.4_2.1.49.1"
 
 #define AMBIT_PRODUCT_NAME          "R8000"
 #define AMBIT_PRODUCT_ALIAS         "Nighthawk X6"
@@ -58,10 +58,16 @@
 #define UPnP_MODEL_DESCRIPTION      "802.11ac"
 
 #define AMBIT_NVRAM_VERSION  "1" /* digital only */
+#define AMBIT_NVRAM_VERSION2  "2" /* digital only */
 
 #ifdef AMBIT_UPNP_SA_ENABLE /* Jasmine Add, 10/24/2006 */
 #define SMART_WIZARD_SPEC_VERSION "0.7"  /* This is specification version of smartwizard 2.0 */
 #endif
+
+/* [Foxc] BrianYang, 2014/11/24, Implement kwilt support */
+#define KWILT_VERSION "20141204"
+#define KWILT_TARBALL_SIZE  6580335
+
 /****************************************************************************
  * Board-specific defintions
  *
@@ -203,7 +209,8 @@
 /* Foxconn Perry added end, 2011/04/13, for document URL */
 
 /* Foxconn Perry added start, 2011/08/17, for USB Support level */
-#define USB_support_level        "13"       /* pling modified 5->13, add bit 4 for Readyshare Vault */
+#define USB_support_level        "29"       /* pling modified 5->13, add bit 4 for Readyshare Vault */
 /* Foxconn Perry added end, 2011/08/17, for USB Support level */
 
 #endif /*_AMBITCFG_H*/
+

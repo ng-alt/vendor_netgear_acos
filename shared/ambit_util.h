@@ -84,6 +84,9 @@ extern int isValidIpAddr(char *ipAddr);
 extern int isValidNetworkAddr(char *ipAddr);
 extern int isValidNetmask(char *mask);
 extern int isLanSubnet(char *ipAddr);
+#ifdef OPENVPN_SUPPORT
+extern int isOpenvpnLanSubnet(char *ipAddr); /* Foxconn added by Max Ding, 04/10/2014 OpenVPN: support tun and tap at the same time */
+#endif
 /* Foxconn add start, Max Ding, 10/31/2008 for @RU_two_wan */
 #ifdef STATIC_PPPOE
 extern int isSecWanSubnet(char *ipAddr);
@@ -215,5 +218,21 @@ extern int checkSemicolon(char *str);
 extern int getNthValueSafe(int index, char *value, char delimit, char *result, int len);
 extern int deleteNthValueMulti(int index[], int count, char *value, char delimit);
 extern char *racat(char *s, int i);
+
+/* Foxconn added start pling 12/10/2014 */
+/* NTGR IPv6 Auto Detection spec change.
+ *  The following define is moved from ap/acos/rc/ipv6.c
+ */
+#if (defined ACOS_IPV6RD)
+typedef struct {
+  char interface[32];
+  char enable;
+  unsigned int ipv4_masklen;
+  char ipv6_prefix[32];
+  char br_addr[64];    // In TR-181 spec, it supports max 4 br addrs, we reserves the space for it.
+} ipv6rd_t;
+#endif
+/* Foxconn added end pling 12/10/2014 */
+
 #endif
 
