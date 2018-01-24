@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H240T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.4.28"
-#define AMBIT_UI_VERSION           "10.0.89"
-#define STRING_TBL_VERSION         "1.0.4.28_2.1.33.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.4.32"
+#define AMBIT_UI_VERSION           "10.0.91"
+#define STRING_TBL_VERSION         "1.0.4.32_2.1.33.1"
 
 #define AMBIT_PRODUCT_NAME          "R6300v2"
 #define AMBIT_PRODUCT_NAME_R6900P   "R6900P"
