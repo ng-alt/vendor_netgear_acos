@@ -47,13 +47,15 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H315T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.4.4"
-#define AMBIT_UI_VERSION           "1.1.42"
-#define STRING_TBL_VERSION         "1.0.4.4_2.1.49.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.4.12"
+#define AMBIT_UI_VERSION           "10.1.46"
+#define STRING_TBL_VERSION         "1.0.4.12_2.1.49.1"
 
 #define AMBIT_PRODUCT_NAME          "R8000"
 #define AMBIT_PRODUCT_ALIAS         "Nighthawk X6"
 #define AMBIT_PRODUCT_DESCRIPTION   "802.11ac Dual Band Gigabit Wireless Router R8000"
+#define AMBIT_PRODUCT_NAME_TRI_BAND         "R8000"
+#define UPnP_MODEL_URL_TRI_BAND             "http://www.netgear.com/Products/RoutersandGateways/RangeMaxNEXTWirelessRoutersandGateways/R8000.aspx"
 #define UPnP_MODEL_URL              "R8000.aspx"
 #define UPnP_MODEL_DESCRIPTION      "802.11ac"
 
@@ -211,6 +213,22 @@
 /* Foxconn Perry added start, 2011/08/17, for USB Support level */
 #define USB_support_level        "29"       /* pling modified 5->13, add bit 4 for Readyshare Vault */
 /* Foxconn Perry added end, 2011/08/17, for USB Support level */
+
+#define DUAL_BAND_HW_VER                 "TBD"
+/* Foxconn add start, Snoopy.wu, 04/07/2015 */
+#define DUAL_BAND_NTGR_SPECIFIC_HW_ID    ""
+#define DUAL_BAND_NTGR_GENERIC_HW_ID     ""
+/* Foxconn add end, Snoopy.wu, 04/07/2015 */
+#define TRI_BAND_HW_VER                  "R8000"
+#define TRI_BAND_HW_VER_ALIAS                  "R7900"
+
+/* Foxconn added by Kathy, 11/19/2016 @ Fixed R8000P Mantis #17041 PnP-X dirver issue*/
+#define NTGR_SPECIFIC_HW_ID     "VEN_01f2&amp;DEV_0019&amp;REV_01" 
+#define NTGR_GENERIC_HW_ID      "VEN_01f2&amp;DEV_8000&amp;SUBSYS_01&amp;REV_01 VEN_01f2&amp;DEV_8000&amp;REV_01"
+
+/* Foxconn add start, Snoopy.wu, 04/07/2015 */
+#define TRI_BAND_NTGR_SPECIFIC_HW_ID     "VEN_01f2&amp;DEV_0019&amp;REV_01"
+#define TRI_BAND_NTGR_GENERIC_HW_ID      "VEN_01f2&amp;DEV_8000&amp;SUBSYS_01&amp;REV_01 VEN_01f2&amp;DEV_8000&amp;REV_01"
 
 #endif /*_AMBITCFG_H*/
 
