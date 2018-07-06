@@ -50,9 +50,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H270T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.9.32"
-#define AMBIT_UI_VERSION           "10.2.34"
-#define STRING_TBL_VERSION         "1.0.9.32_2.1.38.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.9.34"
+#define AMBIT_UI_VERSION           "10.2.36"
+#define STRING_TBL_VERSION         "1.0.9.34_2.1.38.1"
 
 #define AMBIT_PRODUCT_NAME          "R7000"
 #define AMBIT_PRODUCT_NAME_R6900P   "R6900P"
