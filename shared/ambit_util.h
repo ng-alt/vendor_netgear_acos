@@ -34,6 +34,29 @@
 #define BOOL    int
 #endif
 
+#ifndef isxdigit
+#define isxdigit(c)	(('0' <= (c) && (c) <= '9') \
+			 || ('a' <= (c) && (c) <= 'f') \
+			 || ('A' <= (c) && (c) <= 'F'))
+#endif
+
+#ifndef isdigit
+#define isdigit(x) (((x) >= '0') && ((x) <= '9'))
+#endif
+
+#ifndef isspace
+#define isspace(c)	((c) == ' ')
+#endif
+
+#ifndef islf
+#define islf(c)	((c) == '\n')
+#endif
+
+#ifndef iscr
+#define iscr(c)	((c) == '\r')
+#endif
+
+
 /* Debug print */
 #ifdef DEBUG
 #define dprintf(fmt, args...) printf("%s: " fmt, __FUNCTION__, ## args)
@@ -223,7 +246,7 @@ extern int checkSemicolon(char *str);
 extern int getNthValueSafe(int index, char *value, char delimit, char *result, int len);
 extern int deleteNthValueMulti(int index[], int count, char *value, char delimit);
 extern char *racat(char *s, int i);
-
+extern int stricmp (char *s1, char *s2);
 /* Foxconn added start pling 12/10/2014 */
 /* NTGR IPv6 Auto Detection spec change.
  *  The following define is moved from ap/acos/rc/ipv6.c
