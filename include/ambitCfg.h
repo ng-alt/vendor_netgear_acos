@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H315T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.4.12"
-#define AMBIT_UI_VERSION           "10.1.46"
-#define STRING_TBL_VERSION         "1.0.4.12_2.1.49.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.4.28"
+#define AMBIT_UI_VERSION           "10.1.54"
+#define STRING_TBL_VERSION         "1.0.4.28_2.1.49.1"
 
 #define AMBIT_PRODUCT_NAME          "R8000"
 #define AMBIT_PRODUCT_ALIAS         "Nighthawk X6"
@@ -102,6 +102,27 @@
 #define WLAN_5G_2_BSS3_NAME_NUM       "wl2.3"     /* Multiple BSSID #4 */
 #endif /* MULTIPLE_SSID */
 /* Foxconn add end by aspen Bai, 11/13/2008 */
+
+/* CHANNEL definitions */
+#define NA_2G_CHS       "Auto,1,2,3,4,5,6,7,8,9,10,11"
+#define WW_5G_CHS_AUTO  "Auto"
+#define WW_2G_CHS       "Auto,1,2,3,4,5,6,7,8,9,10,11,12,13"
+#define WW_5G_CHS_1_20M "36,40,44,48"
+#define WW_5G_CHS_2_20M "52,56,60,64"
+#define WW_5G_CHS_3_20M "100,104,108,112,116,132,136,140"
+#define WW_5G_CHS_4_20M "149,153,157,161,165"
+#define WW_5G_CHS_1_40M "36,40,44,48"
+#define WW_5G_CHS_2_40M "52,56,60,64"
+#define WW_5G_CHS_3_40M "100,104,108,112,116,120,124,128,132,136"
+#define WW_5G_CHS_4_40M "149,153,157,161"
+#define TW_5G_CHS_2_20M "56,60,64"
+#define TW_5G_CHS_2_40M "60,64"
+#define JP_5G_CHS_3_20M "100,104,108,112,116,120,124,128,132,136,140"
+#define JP_5G_CHS_3_40M "100,104,108,112,116,120,124,128,132,136"
+#define JP_5G_CHS_3_80M "100,104,108,112,116,120,124,128"
+#define CE_5G_CHS_3_80M "100,104,108,112,116,120,124,128"
+
+
 
 /* GPIO definitions */
 /* Foxconn modified start, Wins, 04/11/2011 */
@@ -230,5 +251,13 @@
 #define TRI_BAND_NTGR_SPECIFIC_HW_ID     "VEN_01f2&amp;DEV_0019&amp;REV_01"
 #define TRI_BAND_NTGR_GENERIC_HW_ID      "VEN_01f2&amp;DEV_8000&amp;SUBSYS_01&amp;REV_01 VEN_01f2&amp;DEV_8000&amp;REV_01"
 
+#define WIRELESS_MODE_2G_LEGACY                 "54Mbps"
+#define WIRELESS_MODE_2G_HT20                   "289Mbps"
+#define WIRELESS_MODE_2G_HT40                   "600Mbps"
+#define WIRELESS_MODE_5G_HT20                   "289Mbps"
+#define WIRELESS_MODE_5G_HT40                   "600Mbps"
+#define WIRELESS_MODE_5G_HT80                   "1300Mbps"
+#define WIRELESS_SUPPORT_MODE_2G                "54Mbps,289Mbps,600Mbps"
+#define WIRELESS_SUPPORT_MODE_5G                "289Mbps,600Mbps,1300Mbps"
 #endif /*_AMBITCFG_H*/
 
