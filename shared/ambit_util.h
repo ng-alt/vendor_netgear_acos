@@ -221,6 +221,7 @@ typedef enum log_event_enum
     LOG_EVENT_WPS_LOCKDOWN      = (LOG_CATEGORY_WL << 16) | 38,
 /*fxcn add by dennis end,11/16/2012,add WPS aplockdown log*/
 
+    LOG_EVENT_ACCESS_CONTROL    = (LOG_CATEGORY_INFO << 16) | 40,  //JAG-192  [Access Control] there is no logs about access control 
     LOG_EVENT_ALL               = (LOG_CATEGORY_ALL << 16) | 0xFFFF
 } log_event;
 #endif
@@ -262,5 +263,9 @@ typedef struct {
 #endif
 /* Foxconn added end pling 12/10/2014 */
 
+#ifdef SECURITY_ENHANCEMENT
+extern int samba_tdb_backup(char * username, char * password);
+extern int samba_tdb_restore(void);
+#endif
 #endif
 
