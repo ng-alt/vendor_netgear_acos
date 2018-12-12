@@ -47,9 +47,9 @@
 
 /*formal version control*/
 #define AMBIT_HARDWARE_VERSION     "U12H332T00"
-#define AMBIT_SOFTWARE_VERSION     "V1.0.1.44"
-#define AMBIT_UI_VERSION           "1.0.31"
-#define STRING_TBL_VERSION         "1.0.1.44_2.1.38.1"
+#define AMBIT_SOFTWARE_VERSION     "V1.0.1.46"
+#define AMBIT_UI_VERSION           "1.0.32"
+#define STRING_TBL_VERSION         "1.0.1.46_2.1.38.1"
 
 #define AMBIT_PRODUCT_NAME          "R6400"
 #define AMBIT_PRODUCT_NAME_R6900P    "R6900P"
@@ -58,6 +58,7 @@
 #define UPnP_MODEL_DESCRIPTION      "802.11ac"
 
 #define AMBIT_NVRAM_VERSION  "1" /* digital only */
+#define AMBIT_NVRAM_VERSION2  "2" /* digital only */
 
 #ifdef AMBIT_UPNP_SA_ENABLE /* Jasmine Add, 10/24/2006 */
 #define SMART_WIZARD_SPEC_VERSION "0.7"  /* This is specification version of smartwizard 2.0 */
@@ -196,5 +197,14 @@
 /* Foxconn Perry added start, 2011/08/17, for USB Support level */
 #define USB_support_level        "29"       /* pling modified 5->13, add bit 4 for Readyshare Vault *//*kathy modified 13->29, add bit 16 for ReadyCLOUD */
 /* Foxconn Perry added end, 2011/08/17, for USB Support level */
+
+#define WIRELESS_MODE_2G_LEGACY                 "54Mbps"
+#define WIRELESS_MODE_2G_HT20                   "217Mbps"
+#define WIRELESS_MODE_2G_HT40                   "450Mbps"
+#define WIRELESS_MODE_5G_HT20                   "289Mbps"
+#define WIRELESS_MODE_5G_HT40                   "600Mbps"
+#define WIRELESS_MODE_5G_HT80                   "1300Mbps"
+#define WIRELESS_SUPPORT_MODE_2G                "54Mbps,217Mbps,450Mbps"
+#define WIRELESS_SUPPORT_MODE_5G                "289Mbps,600Mbps,1300Mbps"
 
 #endif /*_AMBITCFG_H*/
